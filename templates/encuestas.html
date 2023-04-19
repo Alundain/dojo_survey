@@ -9,27 +9,28 @@
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
 <body>
-    <h3>Dojo Survey</h3>
-
 <div>
-<form action="/result" method = "post">
-    <label for="fname">Your Name:</label>
-    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+<form action="/process" method = "post">
+    <h3>Dojo Survey</h3>
+    <label for="name">Your Name:</label>
+    <input type="text" id="name" name="name" placeholder="Your name..">
 
     <label for="location">Dojo Location:</label>
     <select id="location" name="location">
-        <option value="chile">Dojo Chile</option>
-        <option value="colombia">Dojo Colombia</option>
-        <option value="mexico">Dojo México</option>
+        <option value="">--SELECT ONE--</option>
+        <option value="Chile">Chile</option>
+        <option value="Colombia">Colombia</option>
+        <option value="Mexico">México</option>
     </select>
     <label for="lenguage">Favorite Language</label>
     <select id="lenguage" name="lenguage">
-        <option value="python">Python</option>
-        <option value="mern">MERN</option>
-        <option value="science">Data Science</option>
+        <option value="">--SELECT ONE--</option>
+        <option value="Python">Python</option>
+        <option value="Mern">MERN</option>
+        <option value="Science">Data Science</option>
     </select>
     <label for="comment">Comment (optional):</label>
-    <input type="text" id="comment" name="comment" placeholder="">
+    <textarea name="comment" placeholder=""></textarea>
 <input type="submit" value="Guardar">
 </form>
 </div>
